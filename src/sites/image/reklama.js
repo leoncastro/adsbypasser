@@ -27,11 +27,11 @@
         host: [
           // com
           // starts with image
-          /^image(ontime|corn|picsa)\.com$/,
+          /^image(ontime|corn|picsa|horse)\.com$/,
           // ends with image
           /^(zonezeed|zelje|croft|myhot|bok|hostur|greasy)image\.com$/,
           // starts with img
-          /^img(next|savvy|\.spicyzilla|twyti|xyz|devil|tzar|ban|pu|beer|wet|tornado|kicks|-pay|nimz|binbou|2share|22|cover|hit|main)\.com$/,
+          /^img(icy|next|savvy|\.spicyzilla|twyti|xyz|devil|tzar|ban|pu|beer|wet|tornado|kicks|-pay|nimz|binbou|2share|22|cover|hit|main)\.com$/,
           // starts with img-
           /^img-(zone|planet)\.com$/,
           // starts with www
@@ -52,10 +52,10 @@
           /damimage\.com$/,
           /imagedecode\.com$/,
           // net
-          /^img(serve|coin|fap|candy|master|-view|run|boom|project|python)\.net$/,
+          /^img(serve|coin|fap|candy|master|-view|run|boom|project|python|pics)\.net$/,
           /^(gallerycloud|imagelaser|project-photo|pix-link|funimg|golfpit|xximg)\.net$/,
           // org
-          /^shotimg\.org$/,
+          /^(shot|adult)img\.org$/,
           /^img(studio|spot)\.org$/,
           /^image(\.adlock|on|team)\.org$/,
           /^(drag|teen|mega)image\.org$/,
@@ -69,7 +69,7 @@
           /^vava\.in$/,
           /^(pixxx|picspornfree|imgload)\.me$/,
           /^(porno-pirat|24avarii|loftlm|18pron)\.ru$/,
-          /^hotimage\.uk$/,
+          /^www\.hotimage\.uk$/,
           /^imgease\.re$/,
           /^goimg\.xyz$/,
           /^pic2pic\.site$/,

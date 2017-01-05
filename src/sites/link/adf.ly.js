@@ -8,6 +8,17 @@
 
   $.register({
     rule: {
+      host: /^adf\.ly$/,
+      path: /^\/redirecting\/(.+)$/,
+    },
+    start: function (m) {
+      var url = atob(m.path[1]);
+      $.openLink(url);
+    },
+  });
+
+  $.register({
+    rule: {
       path: /\/locked$/,
       query: /url=([^&]+)/,
     },
@@ -46,6 +57,8 @@
       // so we hack `document.write` to block CloudFlare's main script.
       // after this the inline script will fail, and leave DOM alone.
       $.window.document.write = _.nop;
+      // break anti-adblock script
+      $.window.btoa = _.nop;
     },
     ready: function () {
       // check if this is ad page
@@ -60,7 +73,7 @@
       // disable cookie check
       $.window.cookieCheck = _.nop;
 
-      h = $.window.eu || getTokenFromRocketScript();
+      h = getTokenFromRocketScript();
       if (!h) {
         h = $('#adfly_bar');
         $.window.close_bar();
@@ -84,7 +97,6 @@
       if (location.hash) {
         h += location.hash;
       }
-      // some sites need Referer header
       $.openLink(h);
     },
   });

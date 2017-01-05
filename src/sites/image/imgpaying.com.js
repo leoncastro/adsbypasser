@@ -24,7 +24,7 @@
     });
   }
 
-  var pathRule = /^\/([0-9a-z]+)(\.|\/|$)/;
+  var pathRule = /^\/([0-9a-zA-Z]+)(\.|\/|$)/;
 
   function go (id, pre, next) {
     $.openLink('', {
@@ -33,6 +33,7 @@
         id: id,
         pre: pre,
         next: next,
+        adb: '0',
       },
     });
   }
@@ -52,7 +53,7 @@
   }
 
   function helper (id, getNext) {
-    var recaptcha = $.$('#recaptcha_widget');
+    var recaptcha = $.$('#recaptcha_widget, #captcha');
     if (recaptcha) {
       _.info('stop because recaptcha');
       return;
@@ -80,17 +81,17 @@
   $.register({
     rule: {
       host: [
-        /^img(paying|mega|zeus|monkey|trex|ve|dew|outlet)\.com$/,
+        /^img(universal|paying|mega|zeus|monkey|trex|ve|dew|diamond)\.com$/,
         /^(www\.)?imgsee\.me$/,
         /^img(click|maid)\.net$/,
-        /^(uploadrr|imageeer|imzdrop|www\.uimgshare)\.com$/,
+        /^(uploadrr|imageeer|imzdrop|www\.uimgshare|pic-maniac)\.com$/,
         /^imgdrive\.co$/,
         /^cuteimg\.cc$/,
         /^img(tiger|gold)\.org$/,
         /^myimg\.club$/,
         /^foxyimg\.link$/,
         /^hulkimge\.com$/,
-        /^coreimg\.net$/,
+        /^(core|iron)img\.net$/,
       ],
       path: pathRule,
     },
@@ -102,8 +103,8 @@
   $.register({
     rule: {
       host: [
-        /^img(rock|town)\.net$/,
-        /^imgmaze\.com$/,
+        /^img(rock|town|view)\.net$/,
+        /^img(maze|outlet)\.com$/,
       ],
       path: pathRule,
     },
@@ -137,6 +138,24 @@
   });
 
   $.register({
+    rule: {
+      host: /^imgfiles\.org$/,
+      path: pathRule,
+    },
+    ready: function (m) {
+      var i = $.$('img.pic');
+      if (i) {
+        // second stage
+        $.openImage(i.src);
+        return;
+      }
+
+      var f = $('form');
+      f.submit();
+    },
+  });
+
+  $.register({
     rule: 'http://imgview.net/tpind.php',
     ready: function () {
       var i = $.$('img.pic');
@@ -146,9 +165,28 @@
         return;
       }
 
-      var d = $('div[id^="imageviewi"] input[type="submit"][style=""]');
-      d = d.parentNode;
-      d.submit();
+      _.wait(500).then(function () {
+        var d = $('div[id^="imageviewi"] input[type="submit"][style=""]');
+        d = d.parentNode;
+        d.submit();
+      });
+    },
+  });
+
+  $.register({
+    rule: /^http:\/\/imgdragon\.com\/(getfil\.php|dl)$/,
+    ready: function () {
+      var i = $.$('img.pic');
+      if (i) {
+        // second stage
+        $.openImage(i.src);
+        return;
+      }
+
+      _.wait(500).then(function () {
+        var f = $('#ContinueFRM');
+        f.submit();
+      });
     },
   });
 

@@ -30,6 +30,18 @@
     }
   };
 
+  $.nuke = function (url) {
+    try {
+      $.window.document.write('nuked by AdsBypasser, leading to ...<br/>');
+    } catch (e) {
+      _.warn('nuke failed', e);
+    }
+    var a = document.createElement('a');
+    a.href = url;
+    a.textContent = url;
+    document.body.appendChild(a);
+  };
+
   $.generateRandomIP = function () {
     return [0,0,0,0].map(function () {
       return Math.floor(Math.random() * 256);
@@ -141,6 +153,10 @@
         }
         // special hack for querySelector
         if (target === unsafeWindow.document.querySelector) {
+          self = self[MAGIC_KEY];
+        }
+        // special hack for write
+        if (target === unsafeWindow.document.write) {
           self = self[MAGIC_KEY];
         }
 

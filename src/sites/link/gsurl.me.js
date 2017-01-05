@@ -1,16 +1,19 @@
 $.register({
   rule: {
     host: [
-      /^(awet|sortir)\.in$/,
-      /^st\.benfile\.com$/,
-      /^st\.azhie\.net$/,
+      /^gsurl\.me$/,
+      /^g5u\.pw$/,
     ],
   },
   ready: function () {
     'use strict';
 
-    var m = $.searchScripts(/window\.location="([^"]*)";/);
-    $.openLink(m[1]);
+    $.removeNodes('#container');
+
+    var a = $('#link');
+    _.wait(5000).then(function () {
+      $.openLink(a.href);
+    });
   },
 });
 

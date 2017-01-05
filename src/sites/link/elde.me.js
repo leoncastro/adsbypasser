@@ -1,10 +1,17 @@
 $.register({
-  rule: 'http://picstate.com.alsohe.com/view/full/*',
+  rule: {
+    host: /^elde\.me$/,
+  },
   ready: function () {
     'use strict';
 
-    var img = $('#image_container img');
-    $.openImage(img.src);
+    // do not remove recaptcha
+    $.removeNodes('iframe:not([name=undefined])');
+
+    var a = $('#modal-alert');
+    a.style.display = 'block';
+    a.style.top = 0;
+    a.style.left = 0;
   },
 });
 

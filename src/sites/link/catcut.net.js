@@ -1,15 +1,12 @@
 $.register({
-  rule: 'http://www.dumppix.com/viewer.php?*',
+  rule: {
+    host: /^catcut\.net$/,
+  },
   ready: function () {
     'use strict';
 
-    var i = $.$('#boring');
-    if (i) {
-      $.openLink(i.src);
-      return;
-    }
-    i = $('table td:nth-child(1) a');
-    $.openLink(i.href);
+    var a = $('#rbs');
+    $.openLink(a.href);
   },
 });
 

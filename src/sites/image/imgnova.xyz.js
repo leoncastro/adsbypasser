@@ -3,8 +3,9 @@ $.register({
     host: [
       /^imgnova\.xyz$/,
       /^www\.hentai-hot\.xyz$/,
+      /^www\.hentai-king\.online$/,
     ],
-    path: /^\/i\/(v|x|o|r)\.php$/,
+    path: /^\/i\/.+\.php$/,
     query: /f=(.+)$/,
   },
   start: function (m) {

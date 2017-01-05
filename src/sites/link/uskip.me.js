@@ -1,13 +1,13 @@
 $.register({
   rule: {
-    host: /^imageban\.(ru|net)$/,
-    path: /^\/show\/\d{4}\/\d{2}\/\d{2}\/.+/,
+    host: /^(www\.)?uskip\.me$/,
+    path: /^\/go\/\w+$/,
   },
-  ready: function () {
+  ready: function (m) {
     'use strict';
 
-    var i = $('#img_obj');
-    $.openImage(i.src);
+    var a = $('#btn-main');
+    $.openLink(a.href);
   },
 });
 

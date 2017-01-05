@@ -1,6 +1,10 @@
 $.register({
   rule: {
-    host: /^(www\.)?shink\.in$/,
+    host: [
+      /^(www\.)?shink\.in$/,
+      /^fas\.li$/,
+      /^croco\.me$/,
+    ],
     path: /^\/\w+$/,
   },
   ready: function () {
@@ -15,18 +19,42 @@ $.register({
     }
 
     // Hide countdown
-    var envio = $("#envio");
-    envio.disabled = false;  
-    envio.style.visibility= "hidden";  
-    envio.style.display='none';
+    var envio = $('#envio');
+    envio.disabled = false;
+    envio.style.visibility = 'hidden';
+    envio.style.display = 'none';
 
     // Display skip button
-    var envio2 = $("#envio2");
-    envio2.style.visibility= "visible";  
-    envio2.style.display='block';
+    var envio2 = $('#envio2');
+    envio2.style.visibility = 'visible';
+    envio2.style.display = 'block';
 
     // Force captcha window to be shown
-    $.window.$("#myModal").reveal();
+    $.window.$('#myModal').reveal();
+  },
+});
+
+$.register({
+  rule: [
+    {
+      host: [
+        /^(www\.)?shink\.in$/,
+        /^fas\.li$/,
+      ],
+      path: /^\/go\/\w+$/,
+    },
+    {
+      host: /^croco\.me$/,
+      path: /^\/ok\/\w+$/,
+    },
+  ],
+  ready: function () {
+    'use strict';
+
+    var a = $('#btn-main');
+    var i = a.href.lastIndexOf('http');
+    a = a.href.substr(i);
+    $.openLink(a);
   },
 });
 

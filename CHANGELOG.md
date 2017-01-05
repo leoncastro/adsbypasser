@@ -1,3 +1,354 @@
+## 5.62.0
+
+* fixed
+    * img.yt
+    * pixhost.org
+* added
+    * catcut.net
+    * adurl.id
+    * goolink.me
+    * filesbucks.com
+    * ani-share.com
+    * elink.link
+    * payurl.me
+    * gunting.web.id
+    * adyou.me
+    * gsurl.me
+    * g5u.pw
+    * azhie.net
+* removed
+    * eafyfsuh.net
+    * sasontnwc.net
+
+## 5.61.2
+
+* fixed
+    * xxxhost.me
+    * imgking.co
+
+## 5.61.1
+
+* fixed
+    * img.yt
+    * lynk.my
+
+## 5.61.0
+
+* fixed
+    * picnictrans.com
+    * imgking.co
+    * linkdrop.net
+    * imgclick.net
+* added
+    * star-hentai.com
+    * autofans.pw
+    * vavi.co
+    * miuitutorial.gq
+    * kombatch.loncat.pw
+    * landscapenature.pw
+    * pixxxels.org
+    * xxxhost.me
+    * gadget13.com
+    * imgfapper.com
+    * qaafa.com
+    * viid.me
+    * safelinkreview.co
+    * decrypt.safelinkconverter.com
+    * blogspot.com
+    * short.est
+    * ulshare.net
+    * imgshots.com
+* removed
+    * postimg.org
+
+## 5.60.6
+
+* fixed
+    * mirrorcreator.com
+    * compul.in
+    * ah.pe
+    * adf.ly
+    * linkdrop.net
+    * dmus.in
+
+## 5.60.5
+
+* fixed
+    * coinlink.co
+
+## 5.60.4
+
+* fixed
+    * page nuking on Firefox
+
+## 5.60.3
+
+* fixed
+    * zytpirwai.net
+
+## 5.60.2
+
+* fixed
+    * log configuration
+    * bc.vc
+
+## 5.60.1
+
+* fixed
+    * remove redirection hack
+
+## 5.60.0
+
+* fixed
+    * image scaling problem
+    * coinlink.co
+    * designinghomey.com
+    * trying to fix some redirection problems
+* added
+    * hentai-baka.com
+    * safelinkreviewer.com
+    * cypt.ga
+    * imgfiles.org
+    * cocoleech.com
+    * imagerar.com
+    * imgdragon.com
+
+## 5.59.0
+
+* fixed
+    * 1be.biz
+    * motonews.club
+    * imgview.net
+* added
+    * playimg.com
+    * voyeurimage.org
+    * imgtor.pw
+    * zytpirwai.net
+    * shorten.id
+    * coinlink.co
+    * imagep2p.com
+    * gtaind.com
+    * comicon.com.br
+    * img3x.com
+    * adlink.guru
+    * picnictrans.com
+    * croco.me
+    * freeanimeonline.xyz
+    * imgcurl.com
+    * short.am
+    * smll.io
+* removed
+    * awet.in
+    * sortir.in
+    * st.benfile.com
+    * st.azhie.net
+
+## 5.58.0
+
+* fixed
+    * imgrock.net
+    * openload.co
+    * coeg.in
+    * link.tl
+* added
+    * uskip.me
+    * ipicture.su
+    * urlgo.gs
+    * amankan.link
+* removed
+    * linc.ml
+
+## 5.57.0
+
+* fixed
+    * 1dl.biz
+    * avenuexxx.com
+    * nar-04.tk
+* added
+    * hentai-pop.com
+    * cdn.javtotal.com
+    * jav-hentai.host
+    * img-king.xyz
+    * imagesouls.net
+    * xxx.porn0day.com
+    * img-hentai.host
+    * hentai-king.host
+    * imagecrest.com
+    * healthygress24.ga
+    * motonews.club
+    * designinghomey.com
+    * kurogaze.net
+    * lolinez.com
+    * fas.li
+    * elde.me
+    * nmac.to
+    * admy.link
+    * moesubs.com
+    * img-uploads.com
+    * imgreputa.com
+    * freephotohostin.com
+    * sports14.pw
+    * insurance1.tech
+    * imgzizi.xyz
+    * linkpaid.net
+* removed
+    * pornprimehd.com
+
+## 5.56.2
+
+* fixed
+    * AJAX white list for TamperMonkey
+    * sht.io
+    * dumppix.com
+    * picstream.tv
+
+## 5.56.1
+
+* fixed
+    * imgview.net
+    * imgclick.com
+    * adf.ly
+    * imageon.org
+    * bunnyforum.org
+    * imageporn.eu
+
+## 5.56.0
+
+* fixed
+    * imagepearl.com
+    * imageberyl.com
+    * imagesnake.com
+    * freebunker.com
+    * sexyxpixels.com
+    * spaste.com
+* added
+    * imgblank.com
+    * domaink.ru
+    * dmus.in
+    * ironimg.net
+    * goto.loncat.in
+    * edogawa.lon.pw
+    * ouo.press
+    * designinghomey.com
+    * igg-games.com
+    * imgrat.com
+    * getcomics.gq
+    * imgz.pw
+    * sipkur.net
+* removed
+    * bk-ddl.net
+
+## 5.55.0
+
+* fixed
+    * imgsay.com
+* added
+    * pic2pic.ru
+    * javtotal.com
+    * ehdwallpapers.org
+    * img4sharing.com
+    * postscreens.info
+    * imgsilo.net
+    * motosport.pw
+    * filmku.lompat.in
+    * imagebic.com
+    * gunting.in
+    * pixsense.net
+    * anisubsia.tk
+    * lindung.in
+
+## 5.54.2
+
+* fixed
+    * spaste.com
+
+## 5.54.1
+
+* fixed
+    * imageberyl.com
+    * spaste.com
+
+## 5.54.0
+
+* fixed
+    * imgcarry.com
+    * spaste.com
+    * imagepearl.com
+* added
+    * hentai-king.online
+    * naughtygate.net
+    * imageshots.com
+    * i.hentai-ddl.org
+    * picangel.in
+    * picstream.tv
+* removed
+    * picstate.com.alsohe.com
+
+## 5.53.0
+
+* fixed
+    * freebunker.com
+    * imgcarry.com
+    * imgcandy.net
+    * ysf.pl
+    * spaste.com
+* added
+    * bunnyforum.org
+    * imageberyl.com
+    * darpix.desi
+    * tinizo.com
+    * pic4you.top
+    * imgplus.ru
+    * imgkings.com
+    * imgdiamond.com
+    * freeimgup.com
+    * imgsen.se
+    * imgtrial.com
+
+## 5.52.0
+
+* fixed
+    * imgnova.xyz
+    * imgseeds.com
+    * imgoutlet.com
+    * shink.in
+* added
+    * img-pop.info
+    * imgnm.net
+    * gadget14.pw
+    * auto14.pw
+    * fapat.me
+    * nar-04.tk
+    * spaste.com
+    * leechpremium.space
+    * naisho.lompat.in
+
+## 5.51.0
+
+* fixed
+    * imagesnake.com
+    * susutin.com
+* added
+    * imgsoo.net
+    * imgwallet.com
+    * awaremmxv.com
+* removed
+    * imagepong.info
+
+## 5.50.0
+
+* fixed
+    * imagepearl.com
+* added
+    * openload.co
+    * adultimg.org
+    * fiuxy.net
+    * imgicy.com
+    * imagehorse.com
+    * imguniversal.com
+    * picture-bang.net
+    * pic-maniac.com
+
 ## 5.49.2
 
 * fixed

@@ -9,13 +9,12 @@
   $.register({
     rule: {
       host: [
-        /^(hentai-hosting|miragepics|funextra\.hostzi|imgrex)\.com$/,
+        /^(hentai-hosting|miragepics|funextra\.hostzi|imgrex|cdn\.javtotal|img3x)\.com$/,
         /^bilder\.nixhelp\.de$/,
         /^imagecurl\.(com|org)$/,
         /^imagevau\.eu$/,
         /^img\.deli\.sh$/,
-        /^imagepong\.info$/,
-        /^imgdream\.net$/,
+        /^img(dream|soo|nm|silo)\.net$/,
         /^imgsicily\.it$/,
         /^www\.imghere\.net$/,
       ],
@@ -65,6 +64,31 @@
   $.register({
     rule: {
       host: /(empireload|loadsanook)\.com$/,
+      query: /file=([^&]+)/,
+    },
+    start: function (m) {
+      $.openImage('files/' + m.query[1]);
+    },
+  });
+
+  // empireload.com
+  $.register({
+    rule: {
+      host: /^dumppix\.com$/,
+      path: /^\/viewer\.php$/,
+      query: /file=([^&]+)/,
+    },
+    start: function (m) {
+      $.openImage('/images/' + m.query[1], {
+        referer: true,
+      });
+    },
+  });
+
+  $.register({
+    rule: {
+      host: /^xxxhost\.me$/,
+      path: /^\/viewer\d+\.php$/,
       query: /file=([^&]+)/,
     },
     start: function (m) {

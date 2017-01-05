@@ -21,6 +21,8 @@
       document.body = document.createElement('body');
     }
     document.body.appendChild(e);
+    // yield execution for ... event loop?
+    return _.wait(0);
   }
 
 
@@ -29,9 +31,26 @@
     var a = document.createElement('a');
     a.href = url;
 
-    // Simulate a click on this link (so that the referer is sent)
-    prepare(a);
-    a.click();
+    // Prevent event interfering
+    var clicked = false;
+    a.addEventListener('click', function (event) {
+      event.stopPropagation();
+      clicked = true;
+    });
+
+    // Simulate clicks on this link (so that the referer is sent)
+    prepare(a).then(() => {
+      a.click();
+      var tick = setInterval(function () {
+        if (clicked) {
+          _.info('already clicked');
+          clearInterval(tick);
+          return;
+        }
+        _.info('try again');
+        a.click();
+      }, 50);
+    });
   }
 
 

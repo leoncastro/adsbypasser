@@ -1,17 +1,13 @@
 $.register({
   rule: {
-    host: /^postimg\.org$/,
+    host: /^goto\.loncat\.in$/,
+    query: /open=(.+)/,
   },
-  ready: function () {
+  start: function (m) {
     'use strict';
 
-    var a = $.$('body > center > a > img');
-    if(a){
-      $.openLink(a.parentNode.href);
-    }
-
-    var i = $('body > center > img');
-    $.openImage(i.src);
+    var url = atob(atob(m.query[1]));
+    $.openLink(url);
   },
 });
 

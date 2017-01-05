@@ -4,6 +4,7 @@ var Browser = require('zombie');
 
 var toolkit = require('./misc/toolkit.js');
 
+var _ = require('../src/util/core.js');
 var link = require('../src/util/link.js');
 
 var factory = toolkit.createFactory(link);
@@ -45,7 +46,7 @@ describe('link', function () {
       });
     });
 
-    it('should redirect to a valid URL', function (done) {
+    it('should redirect to a valid URL', undefined /* FIXME */, function (done) {
       var self = this;
       this.browser.visit(toolkit.page1).catch(function (error) {
         done(error);
@@ -55,6 +56,8 @@ describe('link', function () {
         $.openLink(toolkit.page2);
 
         return self.browser.wait();
+      }).then(function () {
+        return _.wait(100);
       }).then(function () {
         self.browser.window.location.toString().should.equals(toolkit.page2);
         done();

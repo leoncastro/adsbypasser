@@ -5,6 +5,8 @@ This user script helps you
 * skip ads' count-down or continue page
 * block pop-up windows
 
+It **cannot** help you solve reCAPTCHA.
+
 {edition}
 
 Any feature request or bug report is welcome. (either in English, 中文 or 日本語)
@@ -42,9 +44,15 @@ contributors. (sort by GitHub account)
 * [gabrielfin](https://github.com/gabrielfin)
 * [leoncastro](https://github.com/leoncastro)
 * [MNB](https://github.com/MNBuyskih)
+* [muratcesmecioglu](https://github.com/muratcesmecioglu)
+* [murnur19](https://github.com/murnur19)
 * [Tien Nguyen](https://github.com/nhtera)
 * [nhtzr](https://github.com/nhtzr)
 * [ofyxp](https://github.com/ofyxp)
+* [pentium100](https://github.com/pentium100)
+* [phiexz](https://github.com/phiexz)
+* [Raka Sabit](https://github.com/rakasabit)
+* [ReiGelado](https://github.com/ReiGelado)
 * [RickyChen](https://github.com/RickyChien)
 * [U BLESS](https://github.com/ubless607)
 * [xor10](https://github.com/xor10)

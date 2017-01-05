@@ -14,6 +14,10 @@ $.register({
         /^uploadimage\.eu$/,
       ],
     },
+    {
+      host: /^postscreens\.info/,
+      path: /^\/.*/,
+    },
   ],
   ready: function () {
     'use strict';
@@ -32,6 +36,19 @@ $.register({
     'use strict';
 
     var i = $('#imagen img');
+    $.openImage(i.src);
+  },
+});
+
+$.register({
+  rule: {
+    host: /^bunnyforum\.org$/,
+    query: /^\?v=/,
+  },
+  ready: function () {
+    'use strict';
+
+    var i = $('img[title^=Click]');
     $.openImage(i.src);
   },
 });

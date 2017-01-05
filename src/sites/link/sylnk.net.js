@@ -1,3 +1,5 @@
+// all blog type belong here?
+
 $.register({
   rule: [
     {
@@ -10,18 +12,56 @@ $.register({
     },
     {
       host: /^(www\.)?compul\.in$/,
-      path: /^\/n\.php$/,
+      path: /^\/[np]\.php$/,
       query: /v=([^&]+)/,
     },
     {
       host: /^(www\.)?safelinkair\.com$/,
       path: /^\/code$/,
-      query: /(?:\?|&)link=([a-zA-Z0-9=]+)(?:$|&)/,
+      query: /(?:\?|&)link=([a-zA-Z0-9\/=]+)(?:$|&)/,
     },
     {
-      host: /^link\.filmku\.net$/,
-      path: /^\/p\/go\.html$/,
-      query: /^\?url=([a-zA-Z0-9=]+)$/,
+      host: [
+        /^link\.filmku\.net$/,
+        /^www\.healthygress24\.ga$/,
+        /^kombatch\.amankan\.link$/,
+      ],
+      path: /^\/p\/(go|healty-lie)\.html$/,
+      query: /^\?url=([a-zA-Z0-9\/=]+)$/,
+    },
+    {
+      host: [
+        /^(gadget|auto|sports)14\.pw$/,
+        /^motosport\.pw$/,
+        /^nar-04\.tk$/,
+        /^lindung\.in$/,
+        /^motonews\.club$/,
+        /^ww[23]\.picnictrans\.com$/,
+        /^gadget13\.com$/,
+        /^azhie\.net$/,
+      ],
+      query: /^\?d=([a-zA-Z0-9\/=]+)$/,
+    },
+    {
+      host: /^www\.anisubsia\.tk$/,
+      path: /^\/p\/link\.html$/,
+      query: /^\?url=([a-zA-Z0-9\/=]+)$/,
+    },
+    {
+      host: [
+        /^www\.insurance1\.tech$/,
+        /^www\.freeanimeonline\.xyz$/,
+      ],
+      query: /^\?site=([a-zA-Z0-9\/=]+)/,
+    },
+    {
+      host: /^i\.gtaind\.com$/,
+      query: /^\?([a-zA-Z0-9\/=]+)$/,
+    },
+    // blogspot, kind of brutal
+    {
+      host: /\.blogspot\.com?/,
+      query: /^\?url=([a-zA-Z0-9\/=]+)$/,
     },
   ],
   start: function (m) {
@@ -36,8 +76,18 @@ $.register({
   rule: [
     {
       host: [
-        /^(www\.)?(link\.)?safelink(converter2?|s?review)\.com$/,
+        // safelinkconverter.com
+        // safelinkconverter2.com
+        // link.safelinkconverter.com
+        // decrypt.safelinkconverter.com
+        /(^|\.)safelinkconverter2?\.com$/,
+        // safelinkreview.com
+        // safelinksreview.com
+        // safelinkreviewer.com
+        // safelinkreview.co
+        /^safelink(s?review(er)?)\.com?$/,
         /^susutin\.com$/,
+        /^(getcomics|miuitutorial)\.gq$/,
       ],
       query: /id=(\w+=*)/,
     },
@@ -48,6 +98,8 @@ $.register({
         /^ww3\.manteb\.in$/,
         /^link\.filmku\.net$/,
         /^www\.muucih\.com$/,
+        /^(naisho|filmku)\.lompat\.in$/,
+        /^edogawa\.lon\.pw$/,
       ],
       query: /go=(\w+=*)/,
     },
@@ -80,6 +132,55 @@ $.register({
 
     var l = 'http://' + m.path[1];
     $.openLink(l);
+  },
+});
+
+$.register({
+  rule: {
+    host: [
+      /^designinghomey\.com$/,
+      /^motonews\.club$/,
+      /^(autofans|landscapenature)\.pw$/,
+      /^ani-share\.com$/,
+    ],
+    query: /get=([^&]+)/,
+  },
+  ready: function (m) {
+    'use strict';
+
+    var s = $.searchScripts(/var a='([^']+)'/);
+    if (s) {
+      $.openLink(s[1]);
+      return;
+    }
+    s = atob(m.query[1]);
+    $.openLink(s);
+  },
+});
+
+$.register({
+  rule: {
+    host: /^kombatch\.loncat\.pw$/,
+  },
+  ready: function () {
+    'use strict';
+
+    var s = $.searchScripts(/\.open\("([^"]+)",/);
+    s = s[1].match(/go=([^&]+)/);
+    s = atob(s[1]);
+    $.openLink(s);
+  },
+});
+
+$.register({
+  rule: {
+    host: /^ww[23]\.picnictrans\.com$/,
+  },
+  ready: function () {
+    'use strict';
+
+    var a = $('div.kiri > center > a');
+    $.openLink(a.href);
   },
 });
 
